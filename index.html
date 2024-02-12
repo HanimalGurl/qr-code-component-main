@@ -14,13 +14,12 @@
     .attribution { font-size: 11px; text-align: center; bottom:0; }
     .attribution a { color: hsl(228, 45%, 44%); }
     body { background-color:  hsl(212, 45%, 89%);
-          min-height:  100vh;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center; 
           margin:  0;
-          padding:  0; 
+          padding:  3rem 1rem 2rem; 
     }
     #main {
           display: flex;
@@ -34,20 +33,65 @@
           flex-wrap: wrap;
           text-align: center;
           border: 1px solid hsl(0, 0%, 100%);
-          border-radius: 10px;
+          border-radius: 20px;
           padding: 1rem 0.25rem 1rem 0.25rem;
           img {
             width: 95%;
+            border-radius: 20px;
           }
-      p {color: hsl(220, 15%, 55%)}
-    }
+        }
+
+    @media (max-width:  800px) {
+      #main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 85%;
+            flex-direction: column; 
+            font-family: 'Outfit';
+            background-color:hsl(0, 0%, 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+            text-align: center;
+            border: 1px solid hsl(0, 0%, 100%);
+            border-radius: 20px;
+            padding: 1rem 0.25rem 1rem 0.25rem;
+            img {
+              width: 95%;
+              border-radius: 20px;
+            }
+          }
+          h2 {
+            padding: 0 2rem;
+            margin:  0;
+          }
+      }
+      h2 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding: 0 1rem;
+      }
+      p {color: hsl(220, 15%, 55%);
+        font-size:15px;
+        font-weight:400;
+        width: 90%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+    @media (max-width:  375px) {
+      #main {
+          max-width:  50%;
+      }
+      /* Add more styles as needed for smaller screens */
+  }
     
   </style>
 </head>
 <body>
   <div id="main">
     <img src="./images/image-qr-code.png" alt="QR">
-    <h1>Improve your front-end skills by building projects</h1>
+    <h2>Improve your front-end skills by building projects</h2>
     <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
   </div>
   
